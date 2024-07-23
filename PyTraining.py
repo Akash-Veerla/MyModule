@@ -551,8 +551,8 @@ def getmethods(module: str | None) -> None:
 # # 51. SwapNibbles
 # SwapNibbles = lambda x = 0: ((x & 0xF0) >> 4) | ((x & 0x0F) << 4)
 
-# randomListGenerator = lambda a, b, c: \
-#   list(random.randrange(a, b, c) for i in range(int(input("Length of List: "))))
+randomListGenerator = lambda a, b, c: \
+  list(random.randrange(a, b, c) for i in range(int(input("Length of List: "))))
 
   
 
