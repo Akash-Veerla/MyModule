@@ -531,8 +531,7 @@ def getmethods(module: str | None) -> None:
     if module is None: print('No module specified!') 
     else: 
         try:
-            from importlib import import_module as IM
-            module = IM(module)
+            module = __import__(module)
             print('Do you want to see the dunder methods for this module?')
             _ = input("Yes or No (Y/N): ")
             if _.upper() == 'Y':
@@ -558,6 +557,6 @@ randomListGenerator = lambda a, b, c: \
 
 def main():
     # sys.setrecursionlimit(10_000)
-    pass
+    getmethods(input("Enter Module: "))
 
 if __name__ == '__main__': main()
